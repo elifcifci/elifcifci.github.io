@@ -1,14 +1,21 @@
-import styled from "styled-components";
 import { motion } from "framer-motion";
-import { fontSizes, colors, devices } from "../../styles/globalStyles";
 import { HashLink } from "react-router-hash-link";
+
+//Styles
+import styled from "styled-components";
+import {
+  fontSizes,
+  colors,
+  devices,
+  directionRowCenter,
+} from "../../styles/globalStyles";
 
 export const NavbarLink = styled(HashLink)`
   text-decoration: none;
   display: inline-block;
   color: white;
   width: 100%;
-  background-color: ${colors.primary};
+  background-color: ${colors.secondary};
   border-radius: 15px;
   height: 55px;
   line-height: 55px;
@@ -17,7 +24,7 @@ export const NavbarLink = styled(HashLink)`
   @media ${devices.laptop} {
     box-sizing: border-box;
     height: 100%;
-    color: ${colors.secondary} !important;
+    color: ${colors.darkTextColor} !important;
     padding: 20px;
     background-color: unset;
     border-radius: 0;
@@ -25,11 +32,9 @@ export const NavbarLink = styled(HashLink)`
 `;
 export const ItemContainer = styled(motion.li)`
   list-style-type: none;
-  font-size: ${fontSizes.m};
+  font-size: ${fontSizes.sizes3};
   margin-bottom: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  ${directionRowCenter};
   cursor: pointer;
   border-radius: 15px;
   width: 80%;
@@ -40,9 +45,8 @@ export const ItemContainer = styled(motion.li)`
   font-weight: bold;
   box-sizing: border-box;
   padding: 0px;
-
   @media ${devices.mobileS} {
-    font-size: ${fontSizes.lm};
+    font-size: ${fontSizes.sizes4};
   }
 
   @media ${devices.laptop} {
@@ -58,7 +62,7 @@ export const ItemContainer = styled(motion.li)`
 
     &:after {
       content: "";
-      border-bottom: 3px solid #f2d9d3 !important;
+      border-bottom: 3px solid ${colors.primary} !important;
 
       width: 100%;
       height: 100%;
@@ -69,7 +73,7 @@ export const ItemContainer = styled(motion.li)`
 
     &:hover {
       &:after {
-        border-bottom: 3px solid #c98474;
+        border-bottom: 3px solid rgba(201, 132, 116, 0.7) !important;
         width: 100%;
         height: 100%;
         position: relative;
@@ -81,12 +85,12 @@ export const ItemContainer = styled(motion.li)`
     ${(props) =>
       props.selected &&
       `&:after {
-      border-bottom: 3px solid #c98474 !important;
-      width: 100%;
-      height: 100%;
-      position: relative;
-      box-sizing: border-box;
-      bottom: 0;
+        border-bottom: 3px solid rgba(201, 132, 116, 0.7) !important;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        box-sizing: border-box;
+        bottom: 0;
     }`}
   }
 `;
@@ -97,11 +101,10 @@ export const NavbarIcon = styled(motion.svg)`
   padding: 3px;
   width: 60px;
   height: 60px;
-  scale: 0.8;
+  scale: 0.9;
   display: none;
   margin-right: 20px;
   background-color: ${colors.secondary};
-  border: solid 3px ${colors.secondary};
 
   @media ${devices.mobileL} {
     display: flex;
@@ -116,7 +119,7 @@ export const NavbarIcon = styled(motion.svg)`
 export const Paths = styled(motion.path)`
   width: 56%;
   overflow: visible;
-  stroke: ${colors.primary};
+  stroke: ${colors.secondary};
   stroke-width: 35;
   stroke-linejoin: round;
   stroke-linecap: round;

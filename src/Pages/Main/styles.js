@@ -1,3 +1,4 @@
+//Styles
 import styled from "styled-components";
 import {
   fontSizes,
@@ -7,7 +8,7 @@ import {
 } from "../../styles/globalStyles";
 
 export const StyledMainContainer = styled.div`
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   box-sizing: border-box;
   display: flex;
@@ -19,7 +20,7 @@ export const StyledMainContainer = styled.div`
     height: 200px;
     object-fit: cover;
     filter: opacity(80%);
-    position: absolute;
+    position: relative;
     top: 0;
   }
 
@@ -37,22 +38,24 @@ export const StyledMainContainer = styled.div`
   .main-text-container {
     width: 100%;
     height: 100%;
-    ${directionColumnCenter}
-    position: absolute;
+    height: calc(100vh - 200px);
+    padding: 100px 0;
+    box-sizing: border-box;
+    ${directionColumnCenter};
   }
 
   .main-heading {
-    font-size: ${fontSizes.xxl};
-    ${directionColumnCenter}
+    font-size: ${fontSizes.sizes7};
+    ${directionColumnCenter};
     line-height: 55px;
     font-family: "Dancing Script", cursive;
-    color: ${colors.secondary};
-    margin: 20px 0 0 0;
+    color: ${colors.darkTextColor};
+    margin: 0;
   }
 
   .main-description {
-    color: ${colors.primary};
-    font-size: ${fontSizes.lm};
+    color: ${colors.secondary};
+    font-size: ${fontSizes.sizes4};
     margin: 3px;
     font-style: italic;
     margin-top: 0px;
@@ -62,7 +65,7 @@ export const StyledMainContainer = styled.div`
 
   @media ${devices.mobileS} {
     .main-description {
-      font-size: ${fontSizes.l};
+      font-size: ${fontSizes.sizes5};
     }
     .profile-img {
       width: 150px;
@@ -83,12 +86,11 @@ export const StyledMainContainer = styled.div`
       right: 30px;
     }
     .main-heading {
-      font-size: 60px;
+      font-size: ${fontSizes.sizes8};
       line-height: 65px;
     }
     .main-text-container {
-      height: calc(100vh - 75px);
-      margin-top: 75px;
+      height: calc(100vh - 255px);
     }
   }
 
@@ -101,25 +103,21 @@ export const StyledMainContainer = styled.div`
       top: 0px;
     }
     .profile-img {
-      top: 140px;
       display: none;
     }
 
     .main-text-container {
-      height: calc(100vh - 75px);
-      margin-top: 75px;
-      position: relative;
-      top: 40px;
+      height: calc(100vh - 255px);
     }
     .main-heading {
-      font-size: 80px;
+      font-size: ${fontSizes.sizes9};
       line-height: 6rem;
     }
   }
 
   @media ${devices.laptop} {
     .main-heading {
-      font-size: 80px;
+      font-size: ${fontSizes.sizes9};
       line-height: 6rem;
     }
   }
@@ -136,15 +134,14 @@ export const StyledMainContainer = styled.div`
     }
 
     .main-text-container {
-      height: calc(100vh - 185px);
-      margin-top: 185px;
+      height: calc(100vh - 395px);
     }
     .main-heading {
-      font-size: 90px;
+      font-size: ${fontSizes.sizes10};
       line-height: 6rem;
     }
     .main-description {
-      font-size: 30px;
+      font-size: ${fontSizes.sizes6};
       padding-top: 10px;
     }
   }
@@ -161,11 +158,11 @@ export const StyledMainContainer = styled.div`
     }
 
     .main-heading {
-      font-size: 100px;
+      font-size: ${fontSizes.sizes11};
       line-height: 7rem;
     }
     .main-description {
-      font-size: 40px;
+      font-size: ${fontSizes.sizes7};
       padding-top: 15px;
     }
   }

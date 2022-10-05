@@ -3,6 +3,6 @@
   "name": "Create React App Sample",
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#f2d9d3",
   "background_color": "#ffffff"
 }

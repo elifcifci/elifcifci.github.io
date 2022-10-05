@@ -1,6 +1,8 @@
-import styled from "styled-components";
 import { motion } from "framer-motion";
-import { colors, devices } from "../../styles/globalStyles";
+
+//Styles
+import styled from "styled-components";
+import { colors, devices, directionRowCenter } from "../../styles/globalStyles";
 
 export const sidebarAnimationConfigs = {
   open: (height = 100) => ({
@@ -27,15 +29,20 @@ export const Sidebar = styled(motion.div)`
   left: 0;
   bottom: 0;
   width: 100%;
-  max-width: 350px;
   z-index: 2;
-  background-color: #f2d9d3;
+  background-color: ${colors.primary};
   position: fixed;
 
+  @media ${devices.mobileXL} {
+    max-width: 300px;
+  }
+  @media ${devices.tablet} {
+    max-width: 350px;
+  }
   @media ${devices.laptop} {
-    background-color: ${colors.primary};
+    background-color: ${colors.secondary};
     position: fixed;
-    box-shadow: 0px 1px 2px ${colors.tertiary};
+    box-shadow: 0px 1px 2px ${colors.darkBrown};
     width: 100%;
     height: 65px;
     display: none;
@@ -46,9 +53,18 @@ export const Container = styled(motion.nav)`
   width: 100%;
   height: ${(props) => (props.isOpen ? "100%" : "0%")};
   margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  ${directionRowCenter};
   position: fixed;
   z-index: 9999;
+
+  @media ${devices.mobileXL} {
+    max-width: 300px;
+  }
+  @media ${devices.tablet} {
+    max-width: 350px;
+  }
+
+  @media ${devices.laptop} {
+    max-width: 100%;
+  }
 `;

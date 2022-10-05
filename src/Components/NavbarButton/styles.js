@@ -1,5 +1,7 @@
-import styled from "styled-components";
 import { motion } from "framer-motion";
+
+//Styles
+import styled from "styled-components";
 import { devices } from "../../styles/globalStyles";
 
 export const ToggleIcon = styled(motion.button)`

@@ -1,6 +1,6 @@
 import * as React from "react";
-import { ToggleIcon } from "./styles";
 import { motion } from "framer-motion";
+import { ToggleIcon } from "./styles";
 
 const Path = (props) => (
   <motion.path
@@ -12,8 +12,8 @@ const Path = (props) => (
   />
 );
 
-export const NavbarButton = ({ toggle }) => (
-  <ToggleIcon onClick={toggle}>
+export const NavbarButton = ({ toggleOpenOpenBackDrop }) => (
+  <ToggleIcon onClick={toggleOpenOpenBackDrop}>
     <svg width="23" height="23" viewBox="0 0 23 23">
       <Path
         variants={{

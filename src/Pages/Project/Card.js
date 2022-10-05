@@ -1,57 +1,40 @@
-import {
-  CardItem,
-  CardContentContainer,
-  CardContent,
-  CardImageContainer,
-  TitleContainer,
-  ContentDetailOption,
-  CardOpenLink,
-} from "./style";
+import React from "react";
+import { CardItem } from "./styles";
 
-function Card({ id, title, imgLink, previewLink, codeLink }) {
+function Card({ id, title, imgLink, previewLink, codeLink, handleClick }) {
   return (
-    <CardItem>
-      <CardContentContainer>
-        <CardContent layoutId={`card-container-${id}`}>
-          <CardImageContainer
-            className="card-image-container"
-            layoutId={`card-image-container-${id}`}
-          >
-            <CardOpenLink to={`/project-page/${id}`}>
-              <img className="card-img" src={imgLink} alt="" />
-            </CardOpenLink>
-          </CardImageContainer>
+    <CardItem id={`card-${id}`}>
+      <section className="card-image-container">
+        <img className="card_img" src={imgLink} alt="" />
+      </section>
 
-          <TitleContainer layoutId={`title-container-${id}`}>
-            <h2 className="card-title">{title}</h2>
-          </TitleContainer>
+      <section className="title-container">
+        <h2 className="card_title">{title}</h2>
+      </section>
 
-          <section className="project-links">
-            <a
-              className="link-items preview-link-option"
-              href={previewLink}
-              target="_blank"
-            >
-              Preview
-            </a>
-            <a
-              className=" link-items code-link-option"
-              href={codeLink}
-              target="_blank"
-            >
-              Code
-            </a>
-            <ContentDetailOption id={id}>
-              {/* <CardOpenLink
-                className="link-items detail-link-option"
-                to={`/project-page/${id}`}
-              >
-                Detail
-              </CardOpenLink> */}
-            </ContentDetailOption>
-          </section>
-        </CardContent>
-      </CardContentContainer>
+      <section className="project-links">
+        <a
+          className="link-items preview-link-option"
+          href={previewLink}
+          target="_blank"
+        >
+          Preview
+        </a>
+        <a
+          className=" link-items code-link-option"
+          href={codeLink}
+          target="_blank"
+        >
+          Code
+        </a>
+        <span
+          className="link-items detail-link-option"
+          id={id}
+          onClick={handleClick}
+        >
+          Detail
+        </span>
+      </section>
     </CardItem>
   );
 }

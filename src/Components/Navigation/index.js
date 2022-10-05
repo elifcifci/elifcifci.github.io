@@ -5,27 +5,17 @@ import { navbarConstants } from "../../Constants/navbarConstants";
 
 import { NavbarItems, navbarItemsAnimationConfigs } from "./styles";
 
-export const Navigation = ({ toggle }) => {
+export const Navigation = ({ toggleOpenOpenBackDrop }) => {
   const [constant, setConstant] = useState([...navbarConstants]);
 
   const handleClick = (event) => {
-    scrollTop();
     selectNavbarItem(event);
-    toggle();
-  };
-
-  const scrollTop = () => {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "smooth",
-    });
+    toggleOpenOpenBackDrop();
   };
 
   const selectNavbarItem = (event) => {
     const copyConstant = [...constant];
     const selectedText = event.target.text;
-    console.log("selectedText", event.target);
     copyConstant.forEach((item) => {
       const isTextsMatched = item.navbarTitles === selectedText;
       item.selected = isTextsMatched;
