@@ -11,36 +11,20 @@ export const StyledAboutPageContainer = styled.div`
   align-items: center;
   background-color: #f2d9d3;
   row-gap: 2rem;
-
-  .about-heading {
-    color: ${colors.secondary};
-    font-family: "Dancing Script", cursive;
-    font-size: 40px;
-    margin-bottom: 20px;
-    z-index: 1;
-  }
+  padding: 0 30px;
+  scroll-snap-align: start;
 
   .about-page-imgs {
     display: none;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    top: 0;
+    max-width: 1100px;
   }
-  .about-page_img {
-    border-radius: 30px;
-    object-fit: cover;
-    filter: opacity(80%);
-    position: absolute;
-    width: 650px;
-    height: 500px;
-    left: 100px;
-    top: 350px;
+  .about-page_opposite-flower-img {
+    display: none;
   }
 
   .about-me-texts {
+    display: flex;
+    align-items: center;
     border: 3px solid ${colors.primary};
     border-radius: 30px;
     background-color: rgba(255, 255, 255, 1);
@@ -49,7 +33,10 @@ export const StyledAboutPageContainer = styled.div`
     padding: 30px;
     line-height: 30px;
     position: relative;
-    width: 200px;
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+    z-index: 1;
   }
   .about-me_text {
     padding: 0;
@@ -74,77 +61,127 @@ export const StyledAboutPageContainer = styled.div`
     stroke-linecap: round;
   }
   @media${devices.mobileL} {
-    .about-me-texts {
-      width: 300px;
-    }
+    padding: 0 50px;
   }
 
   @media${devices.tablet} {
+    padding: 0 100px;
+
     .about-heading {
-      font-size: 60px;
       bottom: 50px;
     }
-
     .about-me-texts {
-      width: 500px;
+      height: 300px;
+    }
+    .about-me_text {
+      font-size: 18px;
     }
   }
 
   @media${devices.laptop} {
-    min-height: calc(100vh - 75px);
     position: relative;
+    padding: 75px 250px 0 250px;
+
     .about-page-imgs {
       display: flex;
-      max-width: 1440px;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+      position: absolute;
+      width: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .about-page_img {
+      border-radius: 20px;
+      object-fit: cover;
+      filter: opacity(85%);
+      width: 450px;
+      height: 250px;
+      position: relative;
+      z-index: 0;
+    }
+    .about-page_flower-img {
+      width: 430px;
+      height: 250px;
+      top: 35px;
+    }
+
+    .about-page_profile-img {
+      filter: sepia(15%);
+      width: 280px;
+      height: 320px;
+    }
+    .about-me-texts {
+      height: auto;
+      padding: 20px;
+    }
+    .about-me_text {
+      font-size: 20px;
+    }
+    .about-page-contacts {
+      position: relative;
+      z-index: 1;
+      top: 80px;
     }
     .about-page-svg {
       &:hover {
         scale: 1.2;
       }
     }
-
-    .about-heading {
-      position: relative;
-      bottom: 100px;
-    }
-
-    .about-me-texts {
-      position: relative;
-      left: 150px;
-      width: 450px;
-    }
-
-    .about-page-contacts {
-      position: relative;
-      left: 320px;
-      top: 15px;
-    }
   }
 
   @media${devices.laptopL} {
-    .about-heading {
-      font-size: 80px;
-    }
-    .about-me-texts {
-      position: relative;
-      left: 250px;
-      width: 550px;
-    }
+    row-gap: 7rem;
 
-    .about-page_img {
-      border-radius: 30px;
-      object-fit: cover;
-      filter: opacity(80%);
-      position: absolute;
-      width: 650px;
-      height: 550px;
-      left: 150px;
-      top: 350px;
+    .about-page-imgs {
+      padding: 0px;
+      align-items: center;
+    }
+    .about-page_profile-img {
+      order: 1;
+      height: 300px;
+      width: 258px;
+      margin-left: 50px;
+    }
+    .about-page_flower-img {
+      display: none;
+    }
+    .about-page_opposite-flower-img {
+      order: 2;
+      top: 20px;
+      left: 0;
+      display: initial;
+      width: 540px;
+      height: 380px;
     }
 
     .about-page-contacts {
-      position: relative;
-      top: 85px;
+      top: 70px;
+    }
+  }
+
+  @media${devices.laptopXL} {
+    row-gap: 10rem;
+
+    .about-me-texts {
+      max-width: 700px;
+      height: 280px;
+    }
+
+    .about-page-imgs {
+      max-width: 1400px;
+    }
+    .about-page_profile-img {
+      height: 400px;
+      width: 360px;
+      margin: 0;
+      margin-left: 50px;
+    }
+    .about-page_opposite-flower-img {
+      top: 20px;
+      width: 680px;
+      height: 480px;
     }
   }
 `;

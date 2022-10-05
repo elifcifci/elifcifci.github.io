@@ -52,6 +52,5 @@ export const NavbarLink = styled.a`
     padding: 20px;
     background-color: unset;
     border-radius: 0;
-    height: 50px;
   }
 `;

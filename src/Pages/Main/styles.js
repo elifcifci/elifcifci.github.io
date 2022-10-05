@@ -12,6 +12,7 @@ export const StyledMainContainer = styled.div`
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  scroll-snap-align: start;
 
   .main-banner {
     width: 100%;
@@ -73,12 +74,12 @@ export const StyledMainContainer = styled.div`
 
   @media ${devices.tablet} {
     .main-banner {
-      height: 280px;
+      height: 250px;
     }
     .profile-img {
-      width: 200px;
-      height: 200px;
-      top: 150px;
+      width: 180px;
+      height: 180px;
+      top: 130px;
       right: 30px;
     }
     .main-heading {
@@ -94,12 +95,21 @@ export const StyledMainContainer = styled.div`
   @media ${devices.laptop} {
     .main-banner {
       top: 75px;
+      height: 180px;
     }
     .inner-container {
       top: 0px;
     }
     .profile-img {
-      top: 225px;
+      top: 140px;
+      display: none;
+    }
+
+    .main-text-container {
+      height: calc(100vh - 75px);
+      margin-top: 75px;
+      position: relative;
+      top: 40px;
     }
     .main-heading {
       font-size: 80px;

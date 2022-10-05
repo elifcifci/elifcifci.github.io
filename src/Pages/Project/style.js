@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import { fontSizes, colors, devices } from "../../styles/globalStyles";
 
 export const Container = styled.div`
@@ -12,38 +11,28 @@ export const Container = styled.div`
   min-height: 100vh;
   width: 100%;
 
-  .project-heading {
-    display: block;
-    color: ${colors.secondary};
-    text-align: center;
-    margin: 0px;
-    font-size: 50px;
-    font-family: "Dancing Script", cursive;
-
-    @media ${devices.laptop} {
-      margin-top: 70px;
-    }
+  @media ${devices.mobileL} {
+    padding: 25px;
+  }
+  @media ${devices.mobileXL} {
+    padding: 70px;
+  }
+  @media${devices.laptop} {
+    padding-top: 175px;
   }
 `;
 
 export const CardContainer = styled.ul`
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   align-content: flex-start;
-  padding: 0 25px 0px 25px;
   width: 100%;
-  max-width: 1500px;
+  max-width: 1100px;
   padding: 0;
   margin-top: 50px;
   box-sizing: border-box;
 
-  @media ${devices.tablet} {
-    padding: 0 30px 0 30px;
-  }
-
-  @media ${devices.laptop} {
-    padding: 0 150px 0 150px;
-  }
   @media ${devices.desktop} {
     max-width: 1700px;
   }
@@ -53,22 +42,14 @@ export const CardItem = styled.li`
   position: relative;
   height: 430px;
   flex: 1 0 100%;
-  max-width: 100%;
-  padding: 10px;
-  padding-left: 0;
-  padding-right: 0;
+  max-width: 600px;
   list-style: none;
+  padding: 10px 0;
   box-sizing: border-box;
 
-  @media ${devices.mobileL} {
-    padding: 25px;
-    height: 460px;
-  }
-
-  @media ${devices.tablet} {
+  @media ${devices.laptop} {
     flex: 0 0 40%;
     padding: 25px;
-    min-width: 40%;
     height: 460px;
 
     &:nth-child(4n + 1) {
@@ -80,11 +61,6 @@ export const CardItem = styled.li`
       flex: 1 0 60%;
       max-width: 60%;
     }
-  }
-
-  @media ${devices.laptop} {
-    padding: 25px;
-    height: 460px;
   }
 `;
 
@@ -134,6 +110,16 @@ export const CardContent = styled(motion.div)`
   .preview-link-option {
     border-bottom-left-radius: 10px;
   }
+
+  @media${devices.laptop} {
+    .link-items {
+      font-size: ${fontSizes.m};
+
+      &:hover {
+        font-size: ${fontSizes.lm};
+      }
+    }
+  } ;
 `;
 
 export const CardImageContainer = styled(motion.div)`
@@ -174,6 +160,12 @@ export const TitleContainer = styled(motion.div)`
     overflow: hidden;
     text-overflow: ellipsis;
   }
+
+  @media${devices.laptop} {
+    .card-title {
+      font-size: ${fontSizes.lm};
+    }
+  }
 `;
 
 export const Title = styled.h2`
@@ -208,7 +200,7 @@ export const ContentDetailOption = styled(motion.span)`
   }
 `;
 
-export const CardOpenLink = styled(Link)`
+export const CardOpenLink = styled.a`
   width: 100%;
   height: 100%;
   text-decoration: none;

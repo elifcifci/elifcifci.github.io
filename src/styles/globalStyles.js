@@ -4,6 +4,7 @@ export const devices = {
   mobileS: `(min-width: 320px)`,
   mobileM: `(min-width: 375px)`,
   mobileL: `(min-width: 425px)`,
+  mobileXL: `(min-width: 580px)`,
   tablet: `(min-width: 768px)`,
   laptop: `(min-width: 1024px)`,
   laptopL: `(min-width: 1440px)`,
@@ -70,6 +71,23 @@ body {
   @media(min-width: 300px){
     width: 100%;
     overflow-x: visible ;
+  }
+
+}
+
+.page-heading {
+  font-family: "Dancing Script", cursive;
+  text-align: center;
+  margin: 0;
+  font-size: 40px;
+  color: ${colors.secondary};
+
+  @media ${devices.tablet} {
+      font-size: 60px; 
+  }
+
+  @media ${devices.laptopL} {
+      font-size: 80px;
   }
 }
 

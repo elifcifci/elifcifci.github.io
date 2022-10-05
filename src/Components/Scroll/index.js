@@ -1,11 +1,9 @@
 import React from "react";
 import { ScrollIcon } from "./styles";
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
 
 const Scroll = ({ scrollPoint, ScrollIconAppearPoint, direction }) => {
   const [visible, setVisible] = useState(false);
-  let location = useLocation();
 
   useEffect(() => {
     window.addEventListener("scroll", () => {

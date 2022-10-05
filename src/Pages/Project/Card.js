@@ -42,12 +42,12 @@ function Card({ id, title, imgLink, previewLink, codeLink }) {
               Code
             </a>
             <ContentDetailOption id={id}>
-              <CardOpenLink
+              {/* <CardOpenLink
                 className="link-items detail-link-option"
                 to={`/project-page/${id}`}
               >
                 Detail
-              </CardOpenLink>
+              </CardOpenLink> */}
             </ContentDetailOption>
           </section>
         </CardContent>

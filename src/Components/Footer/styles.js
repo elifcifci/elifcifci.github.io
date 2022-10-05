@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { fontSizes, colors } from "../../styles/globalStyles";
+import { fontSizes, colors, devices } from "../../styles/globalStyles";
 
 export const Wrapper = styled.footer`
   border-top: 3px solid ${colors.primary};
@@ -11,18 +11,25 @@ export const Wrapper = styled.footer`
   align-items: center;
   justify-content: end;
   font-size: ${fontSizes.xs};
-`;
 
-export const Link = styled.a`
-  line-height: 50px;
-  color: ${colors.secondary};
-  padding: 10px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: ${fontSizes.m};
+  .footer-link {
+    line-height: 50px;
+    color: ${colors.secondary};
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: ${fontSizes.m};
 
-  &:hover {
-    cursor: pointer;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  @media${devices.laptopXL} {
+    font-size: ${fontSizes.m};
+
+    .footer-link {
+      font-size: ${fontSizes.lm};
+    }
   }
 `;

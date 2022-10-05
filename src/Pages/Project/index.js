@@ -5,8 +5,8 @@ import { Container, CardContainer } from "./style";
 
 function Project({ selectedId }) {
   return (
-    <Container>
-      <h1 className="project-heading">My Projects</h1>
+    <Container id="project-page">
+      <h1 className="page-heading">My Projects</h1>
       <CardContainer>
         {projectConstant.map((card) => (
           <Card key={card.id} {...card} isSelected={card.id === selectedId} />

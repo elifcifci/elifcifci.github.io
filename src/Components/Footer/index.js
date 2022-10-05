@@ -10,6 +10,7 @@ const Footer = () => {
           href={"https://github.com/elifcifci"}
           title="Go her github"
           target="_blank"
+          className="footer-link"
         >
           {" "}
           Elif Çiftçi{" "}

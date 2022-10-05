@@ -25,8 +25,7 @@ export const Navigation = ({ toggle }) => {
   const selectNavbarItem = (event) => {
     const copyConstant = [...constant];
     const selectedText = event.target.text;
-
-    console.log("selectedText: ", selectedText);
+    console.log("selectedText", event.target);
     copyConstant.forEach((item) => {
       const isTextsMatched = item.navbarTitles === selectedText;
       item.selected = isTextsMatched;
@@ -42,7 +41,7 @@ export const Navigation = ({ toggle }) => {
           key={constant.id}
           selected={constant.selected}
           onClick={handleClick}
-          link={constant.navbarLinks}
+          links={constant.navbarLinks}
           title={constant.navbarTitles}
           viewBox={constant.viewBox}
           icon={constant.icon}

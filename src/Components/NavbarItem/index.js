@@ -21,7 +21,7 @@ const variants = {
 };
 
 export const NavbarItem = ({
-  link,
+  links,
   title,
   onClick,
   selected,
@@ -42,9 +42,8 @@ export const NavbarItem = ({
       },
     },
   };
-
   return (
-    <ItemContainer onClick={onClick} variants={variants}>
+    <ItemContainer onClick={onClick} variants={variants} selected={selected}>
       <NavbarIcon viewBox={viewBox}>
         <Paths
           d={`${icon}`}
@@ -53,7 +52,7 @@ export const NavbarItem = ({
           animate="visible"
         />
       </NavbarIcon>
-      <NavbarLink to={"#about-page"} selected={selected}>
+      <NavbarLink smooth to={`/#${links}`}>
         {title}
       </NavbarLink>
     </ItemContainer>

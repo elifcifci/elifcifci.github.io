@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { fontSizes, colors, devices } from "../../styles/globalStyles";
-import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
-export const NavbarLink = styled(Link)`
+export const NavbarLink = styled(HashLink)`
   text-decoration: none;
   display: inline-block;
   color: white;
@@ -14,21 +14,15 @@ export const NavbarLink = styled(Link)`
   line-height: 55px;
   transition: background-color 0s;
 
-  ${(props) =>
-    props.selected
-      ? `scale:1.2;
-    color: colors.secondary`
-      : `color: white`} !important;
-
   @media ${devices.laptop} {
+    box-sizing: border-box;
+    height: 100%;
     color: ${colors.secondary} !important;
     padding: 20px;
     background-color: unset;
     border-radius: 0;
-    height: 50px;
   }
 `;
-
 export const ItemContainer = styled(motion.li)`
   list-style-type: none;
   font-size: ${fontSizes.m};
@@ -52,30 +46,48 @@ export const ItemContainer = styled(motion.li)`
   }
 
   @media ${devices.laptop} {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
     line-height: 25px;
-    height: 75px;
     margin-bottom: 0px;
     border-radius: 0px;
     opacity: 1 !important;
     transform: unset !important;
     box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 20px -10px;
 
-    &::after {
+    &:after {
       content: "";
-      border-bottom: 2px solid #f2d9d3 !important;
+      border-bottom: 3px solid #f2d9d3 !important;
+
       width: 100%;
-      height: 3px;
-      position: absolute;
+      height: 100%;
+
+      position: relative;
       bottom: 0;
     }
 
     &:hover {
-      &::after {
-        border-bottom: 2px solid #c98474 !important;
+      &:after {
+        border-bottom: 3px solid #c98474;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        box-sizing: border-box;
+        bottom: 0;
       }
     }
 
-    ${(props) => props.selected === true && `border: solid`}
+    ${(props) =>
+      props.selected &&
+      `&:after {
+      border-bottom: 3px solid #c98474 !important;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      box-sizing: border-box;
+      bottom: 0;
+    }`}
   }
 `;
 
