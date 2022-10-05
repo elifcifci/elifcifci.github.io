@@ -12,44 +12,29 @@ export const devices = {
   desktop: `(min-width: 2560px)`,
 };
 export const colors = {
-  // pageBackground: "linear-gradient(to bottom, #232526, #3a3d40)",
-  // primary: "#01411C",
-  // secondary: "#6B8E23",
-  // tertiary: "#2d2626",
-  // textColor: "#fff",
-  // borderColor: "#fff",
-  // mobileNavbarBackground: "#fff",
-  // gray: "#303841",
-  // darkGray: "#2e2727",
-  // lightGray: "#808080",
-  // cardTitle: "rgb(45, 38, 38)",
-  // cardDetail: "#131215",
-  // openedCardBackground: "rgba(0, 0, 0, 0.8)",
-
-  pageBackground: "white",
-  primary: "#C98474",
-  secondary: "#472D2D",
-  tertiary: "#2d2626",
+  primary: "#f7e7e4",
+  secondary: "#C98474",
+  openedCardTextBackground: "#ab7265",
+  darkTextColor: "#472D2D",
+  brown: "#734a40",
+  darkBrown: "#2d2626",
   textColor: "black",
-  borderColor: "#C98474",
-  mobileNavbarBackground: "#fff",
-  gray: "#303841",
-  darkGray: "#2e2727",
-  lightGray: "#808080",
-  cardTitle: "rgb(45, 38, 38)",
-  cardDetail: "#131215",
-  openedCardBackground: "rgba(0, 0, 0, 0.8)",
+  disabled: "#807c7c",
 };
 
 export const fontSizes = {
-  xs: "16px",
-  s: "17px",
-  m: "18px",
-  lm: "20px",
-  l: "25px",
-  xl: "30px",
-  xxl: "40px",
-  xxxl: "100px",
+  sizes0: "14px",
+  sizes1: "16px",
+  sizes2: "17px",
+  sizes3: "18px",
+  sizes4: "20px",
+  sizes5: "25px",
+  sizes6: "30px",
+  sizes7: "40px",
+  sizes8: "60px",
+  sizes9: "80px",
+  sizes10: "90px",
+  sizes11: "100px",
 };
 
 export const directionColumnCenter = `
@@ -57,6 +42,12 @@ export const directionColumnCenter = `
   flex-direction: column;
   align-items: center;
   justify-content: center;
+`;
+
+export const directionRowCenter = `
+display: flex;
+justify-content: center;
+align-items: center;
 `;
 
 const GlobalStyle = createGlobalStyle`
@@ -72,22 +63,21 @@ body {
     width: 100%;
     overflow-x: visible ;
   }
-
 }
 
 .page-heading {
   font-family: "Dancing Script", cursive;
   text-align: center;
   margin: 0;
-  font-size: 40px;
-  color: ${colors.secondary};
+  font-size: ${fontSizes.sizes7};
+  color: ${colors.darkTextColor};
 
   @media ${devices.tablet} {
-      font-size: 60px; 
+      font-size: ${fontSizes.sizes8}; 
   }
 
   @media ${devices.laptopL} {
-      font-size: 80px;
+      font-size: ${fontSizes.sizes9};
   }
 }
 

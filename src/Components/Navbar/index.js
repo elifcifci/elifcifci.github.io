@@ -1,22 +1,22 @@
 import React, { useRef } from "react";
-import { useCycle } from "framer-motion";
-import { NavbarButton } from "../NavbarButton";
-import { Navigation } from "../Navigation";
 import { Container, Sidebar, sidebarAnimationConfigs } from "./styles";
 
-const Navbar = () => {
-  const [isOpen, toggleOpen] = useCycle(false, true);
+//Components
+import { NavbarButton } from "../NavbarButton";
+import { Navigation } from "../Navigation";
+
+const Navbar = ({ isOpenBackDrop, toggleOpenOpenBackDrop }) => {
   const containerRef = useRef(null);
 
   return (
     <Container
       initial={false}
-      animate={isOpen ? "open" : "closed"}
+      animate={isOpenBackDrop ? "open" : "closed"}
       ref={containerRef}
     >
       <Sidebar variants={sidebarAnimationConfigs} />
-      <NavbarButton toggle={() => toggleOpen()} />
-      <Navigation toggle={() => toggleOpen()} />
+      <NavbarButton toggleOpenOpenBackDrop={toggleOpenOpenBackDrop} />
+      <Navigation toggleOpenOpenBackDrop={toggleOpenOpenBackDrop} />
     </Container>
   );
 };

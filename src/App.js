@@ -1,40 +1,37 @@
 import React from "react";
+import { useCycle } from "framer-motion";
+import GlobalStyle from "./styles/globalStyles";
+
+//Pages
 import Main from "./Pages/Main";
 import About from "./Pages/About";
 import Project from "./Pages/Project";
-// import OpenedCard from "./Pages/Project/OpenedCard";
+
+//Components
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
-import GlobalStyle from "./styles/globalStyles";
-import { AnimateSharedLayout } from "framer-motion";
-// import Scroll from "./Components/Scroll/index";
+import BackDrop from "./Components/Backdrop";
 
 function App() {
+  const [isOpenBackDrop, toggleOpenOpenBackDrop] = useCycle(false, true);
+
   return (
     <div className="container">
       {/* Common variables such as styles and color that apply to the entire project are in the global file. */}
       <GlobalStyle />
-      {/* The AnimateSharedLayout component enables you to perform layout animations between different components that share a layoutId as they're added/removed. */}
-      <AnimateSharedLayout>
-        <Navbar />
-        {/* <Scroll
-          scrollPoint={66}
-          ScrollIconAppearPoint={500}
-          direction={"scrollUp"}
-        />
-        <Scroll
-          scrollPoint={99999}
-          ScrollIconAppearPoint={65}
-          direction={"scrollDown"}
-        /> */}
-        <Main />
-        <About />
-        <Project />
-        {/* <Routes>
-            <Route path="/project-page/:id" exact element={<OpenedCard />} />
-          </Routes> */}
-        <Footer />
-      </AnimateSharedLayout>
+      <Navbar
+        isOpenBackDrop={isOpenBackDrop}
+        toggleOpenOpenBackDrop={() => toggleOpenOpenBackDrop()}
+      />
+      <BackDrop
+        isForProjectPage={false}
+        isOpenBackDrop={isOpenBackDrop}
+        toggleOpenOpenBackDrop={() => toggleOpenOpenBackDrop()}
+      />
+      <Main />
+      <About />
+      <Project />
+      <Footer />
     </div>
   );
 }

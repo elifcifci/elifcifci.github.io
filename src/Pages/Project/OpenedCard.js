@@ -1,65 +1,79 @@
-import { AnimatePresence } from "framer-motion";
-import { projectConstant } from "../../Constants/projectConstant";
-import { useParams } from "react-router-dom";
-import ProjectPage from "./index";
+import { useEffect } from "react";
+import { OpenedCardContainer } from "./styles";
 
-import {
-  DetailCloseContainer,
-  OpenedCardContainer,
-  OpenedCardContent,
-  OpenedCardImageContainer,
-  OpenedTitleContainer,
-  Content,
-} from "./style";
+function OpenedCard({
+  openedCardKnowledge,
+  isOpen,
+  toggleOpen,
+  selectedCardId,
+}) {
+  const selectedCard = document.getElementById(`card-${selectedCardId}`);
 
-function OpenedCard() {
-  let params = useParams();
-  const imageHasLoaded = true;
-  let selectedProject = projectConstant.filter((project) => {
-    return project.id == params.id;
-  });
+  //openedCard is  in the middle of project page. When it opened, the screen will scroll to the location of the openedCard.
+  useEffect(() => {
+    const innerHeight = window.innerHeight;
+    const documentHeight = document.documentElement.scrollHeight;
+    const mainAndAboutPageTotalHeight = innerHeight * 2;
+    const halfOfProjectPageHeight = (documentHeight - innerHeight * 2) / 2;
+    const halfOfCardHeight = 400;
+    const selectedCardLocation = selectedCard.offsetTop;
 
-  let { id, title, explanation, imgLink } = selectedProject[0];
+    //openedCard seems middle of project page, so the page should automatically scrolled to location of openedCard.
+    // When the user close the openedCard the user should see the card that selected, so we should scroll the page first location again.
+    if (isOpen) {
+      window.scrollTo({
+        top:
+          mainAndAboutPageTotalHeight +
+          halfOfProjectPageHeight -
+          halfOfCardHeight,
+        behavior: "smooth",
+      });
+    } else {
+      window.scrollTo({
+        top: mainAndAboutPageTotalHeight + selectedCardLocation - 100,
+        behavior: "smooth",
+      });
+    }
+  }, [isOpen]);
+
+  const openedCardConfig = {
+    open: {
+      display: "initial",
+      transition: {
+        type: "spring",
+        damping: 30,
+        delay: 0.4,
+      },
+    },
+    closed: {
+      display: "none",
+      transition: {
+        delay: 1,
+        type: "tween",
+        damping: 30,
+        delay: 0.4,
+      },
+    },
+  };
+
   return (
-    <>
-      <ProjectPage selectedId={params.id} />
-      {/* AnimatePresence allows components to animate out when they're removed from the React tree. */}
-      <AnimatePresence>
-        {params.id && imageHasLoaded && (
-          <>
-            <DetailCloseContainer
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0, transition: { duration: 0.15 } }}
-              transition={{ duration: 0.2, delay: 0.15 }}
-              style={{ pointerEvents: "auto" }}
-            >
-              <a className="detail-close-link" to="/project-page" />
-            </DetailCloseContainer>
+    <OpenedCardContainer
+      variants={openedCardConfig}
+      animate={isOpen ? "open" : "closed"}
+      onClick={() => toggleOpen}
+    >
+      <img className="opened-card_img" src={openedCardKnowledge.img} alt="" />
 
-            <OpenedCardContainer>
-              <OpenedCardContent layoutId={`card-container-${id}`}>
-                <OpenedCardImageContainer
-                  layoutId={`card-image-container-${id}`}
-                >
-                  <img className="card-img" src={imgLink} alt="" />
-                </OpenedCardImageContainer>
-
-                <OpenedTitleContainer layoutId={`title-container-${id}`}>
-                  <h2 className="opened-card-title">{title}</h2>
-                </OpenedTitleContainer>
-
-                <Content animate>
-                  <p className="opened-card-description">
-                    <span>{explanation}</span>
-                  </p>
-                </Content>
-              </OpenedCardContent>
-            </OpenedCardContainer>
-          </>
-        )}
-      </AnimatePresence>
-    </>
+      <section className="opened-card-title-container">
+        <h2 className="opened-card_title">{openedCardKnowledge.title}</h2>
+      </section>
+      <section className="opened-card-detail-container">
+        <p className="opened_description">{openedCardKnowledge.details[0]}</p>
+        <p className="opened_description">
+          Used technologies: {openedCardKnowledge.details[1]}
+        </p>
+      </section>
+    </OpenedCardContainer>
   );
 }
 

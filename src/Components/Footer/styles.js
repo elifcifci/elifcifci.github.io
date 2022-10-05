@@ -1,8 +1,9 @@
+//Styles
 import styled from "styled-components";
 import { fontSizes, colors, devices } from "../../styles/globalStyles";
 
 export const Wrapper = styled.footer`
-  border-top: 3px solid ${colors.primary};
+  border-top: 3px solid rgba(201, 132, 116, 0.7);
   height: 10vh;
   color: ${colors.textColor};
   box-sizing: border-box;
@@ -10,15 +11,15 @@ export const Wrapper = styled.footer`
   display: flex;
   align-items: center;
   justify-content: end;
-  font-size: ${fontSizes.xs};
+  font-size: ${fontSizes.sizes1};
 
   .footer-link {
     line-height: 50px;
-    color: ${colors.secondary};
+    color: ${colors.darkTextColor};
     padding: 10px;
     text-decoration: none;
     font-weight: bold;
-    font-size: ${fontSizes.m};
+    font-size: ${fontSizes.sizes3};
 
     &:hover {
       cursor: pointer;
@@ -26,10 +27,10 @@ export const Wrapper = styled.footer`
   }
 
   @media${devices.laptopXL} {
-    font-size: ${fontSizes.m};
+    font-size: ${fontSizes.sizes3};
 
     .footer-link {
-      font-size: ${fontSizes.lm};
+      font-size: ${fontSizes.sizes4};
     }
   }
 `;

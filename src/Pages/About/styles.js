@@ -1,15 +1,18 @@
+//Styles
 import styled from "styled-components";
-import { colors, devices } from "../../styles/globalStyles";
+import {
+  colors,
+  devices,
+  fontSizes,
+  directionColumnCenter,
+} from "../../styles/globalStyles";
 
 export const StyledAboutPageContainer = styled.div`
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #f2d9d3;
+  ${directionColumnCenter};
+  background-color: ${colors.primary};
   row-gap: 2rem;
   padding: 0 30px;
   scroll-snap-align: start;
@@ -25,9 +28,9 @@ export const StyledAboutPageContainer = styled.div`
   .about-me-texts {
     display: flex;
     align-items: center;
-    border: 3px solid ${colors.primary};
+    border: 3px solid ${colors.secondary};
     border-radius: 30px;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: white;
     box-shadow: rgba(201, 132, 116, 0.4) 0px 3px 12px;
     text-align: center;
     padding: 30px;
@@ -40,7 +43,7 @@ export const StyledAboutPageContainer = styled.div`
   }
   .about-me_text {
     padding: 0;
-    color: ${colors.primary};
+    color: ${colors.secondary};
   }
 
   .about-page_link {
@@ -48,7 +51,7 @@ export const StyledAboutPageContainer = styled.div`
     width: 50px;
     box-sizing: border-box;
     padding: 7px;
-    color: ${colors.primary} !important;
+    color: ${colors.secondary} !important;
     fill: white;
   }
   .about-page-svg {
@@ -56,7 +59,7 @@ export const StyledAboutPageContainer = styled.div`
     filter: drop-shadow(1px 1px 1px rgba(201, 132, 116, 0.5));
   }
   path {
-    stroke: ${colors.primary};
+    stroke: ${colors.secondary};
     stroke-linejoin: round;
     stroke-linecap: round;
   }
@@ -74,7 +77,7 @@ export const StyledAboutPageContainer = styled.div`
       height: 300px;
     }
     .about-me_text {
-      font-size: 18px;
+      font-size: ${fontSizes.sizes3};
     }
   }
 
@@ -117,7 +120,7 @@ export const StyledAboutPageContainer = styled.div`
       padding: 20px;
     }
     .about-me_text {
-      font-size: 20px;
+      font-size: ${fontSizes.sizes4};
     }
     .about-page-contacts {
       position: relative;

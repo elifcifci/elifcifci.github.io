@@ -1,7 +1,5 @@
 import React from "react";
-
 import { contactConstants } from "../../Constants/contactConstants";
-
 import { StyledAboutPageContainer } from "./styles";
 
 const About = () => {
