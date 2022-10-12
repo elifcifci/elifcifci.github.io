@@ -43,6 +43,17 @@ export const Container = styled.div`
     .card-title {
       font-size: ${fontSizes.sizes4};
     }
+<<<<<<< HEAD
+=======
+
+    .link-items {
+      font-size: ${fontSizes.sizes3};
+
+      &:hover {
+        font-size: ${fontSizes.sizes4};
+      }
+    }
+>>>>>>> 7378fcb2148bb13e9114f439773ace9924b29e7c
   }
 
   @media ${devices.desktop} {
@@ -68,6 +79,7 @@ export const CardItem = styled(motion.div)`
 
   .title-container {
     position: absolute;
+<<<<<<< HEAD
     top: 320px;
     left: 0;
     width: 100%;
@@ -75,12 +87,24 @@ export const CardItem = styled(motion.div)`
     height: 56px;
   }
   .card_title {
+=======
+    top: 330px;
+    left: 0;
+    width: 100%;
+  }
+  .card_title {
+    border-bottom: solid 3px rgba(201, 132, 116, 0.1);
+>>>>>>> 7378fcb2148bb13e9114f439773ace9924b29e7c
     color: ${colors.darkTextColor};
     font-size: ${fontSizes.sizes3};
     background-color: ${colors.primary};
     text-align: center;
     box-sizing: border-box;
+<<<<<<< HEAD
     height: 100%;
+=======
+    height: 55px;
+>>>>>>> 7378fcb2148bb13e9114f439773ace9924b29e7c
     width: 100%;
     margin: -10px 0 0 0;
     padding: 10px;
@@ -89,8 +113,11 @@ export const CardItem = styled(motion.div)`
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+<<<<<<< HEAD
     border-bottom: solid 3px rgba(201, 132, 116, 0.1);
     box-shadow: rgba(0, 0, 0, 0.03) 0px 1px 2px 0px inset;
+=======
+>>>>>>> 7378fcb2148bb13e9114f439773ace9924b29e7c
   }
 
   .card-image-container {
@@ -113,10 +140,15 @@ export const CardItem = styled(motion.div)`
     height: 55px;
     position: relative;
     top: 365px;
+<<<<<<< HEAD
     background-color: ${colors.primary};
   }
 
   .detail-option {
+=======
+  }
+  .link-items {
+>>>>>>> 7378fcb2148bb13e9114f439773ace9924b29e7c
     background-color: ${colors.primary};
     color: ${colors.darkTextColor};
     text-decoration: none;
@@ -131,6 +163,15 @@ export const CardItem = styled(motion.div)`
       font-size: ${fontSizes.sizes3};
     }
   }
+<<<<<<< HEAD
+=======
+  .preview-link-option {
+    border-bottom-left-radius: 10px;
+  }
+  .detail-link-option {
+    border-bottom-right-radius: 10px;
+  }
+>>>>>>> 7378fcb2148bb13e9114f439773ace9924b29e7c
 
   @media${devices.laptop} {
     flex: 0 0 35%;
@@ -149,7 +190,11 @@ export const CardItem = styled(motion.div)`
       font-size: ${fontSizes.sizes4};
     }
 
+<<<<<<< HEAD
     .detail-option {
+=======
+    .link-items {
+>>>>>>> 7378fcb2148bb13e9114f439773ace9924b29e7c
       font-size: ${fontSizes.sizes3};
 
       &:hover {
@@ -159,6 +204,7 @@ export const CardItem = styled(motion.div)`
   }
 `;
 
+<<<<<<< HEAD
 export const LinkItems = styled.a`
   background-color: ${colors.primary};
   color: ${colors.darkTextColor};
@@ -204,6 +250,8 @@ export const LinkItems = styled.a`
   }
 `;
 
+=======
+>>>>>>> 7378fcb2148bb13e9114f439773ace9924b29e7c
 export const OpenedCardContainer = styled(CardItem)`
   width: 90%;
   max-width: 600px;
@@ -226,6 +274,10 @@ export const OpenedCardContainer = styled(CardItem)`
     background: linear-gradient(90deg, rgba(255,249,245,1) 0%, rgba(255,236,221,1) 100%);     
     z-index: 5;
     margin-top: -6px;
+<<<<<<< HEAD
+=======
+    width: 100%;
+>>>>>>> 7378fcb2148bb13e9114f439773ace9924b29e7c
     padding: 10px;
     border-bottom: solid 1px rgba(115, 74, 64, 0.1);
   }
