@@ -19,10 +19,7 @@ export const colors = {
   brown: "#734a40",
   darkBrown: "#2d2626",
   textColor: "black",
-<<<<<<< HEAD
   disabled: "#807c7c",
-=======
->>>>>>> 7378fcb2148bb13e9114f439773ace9924b29e7c
 };
 
 export const fontSizes = {

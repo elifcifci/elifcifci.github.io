@@ -30,11 +30,7 @@ export const Sidebar = styled(motion.div)`
   bottom: 0;
   width: 100%;
   z-index: 2;
-<<<<<<< HEAD
   background-color: rgba(255, 255, 255, 0.92);
-=======
-  background-color: ${colors.primary};
->>>>>>> 7378fcb2148bb13e9114f439773ace9924b29e7c
   position: fixed;
 
   @media ${devices.mobileXL} {
