@@ -5,15 +5,14 @@ const Footer = () => {
   return (
     <Wrapper>
       <p>
-        Created by{" "}
+        Created by
         <a
           href={"https://github.com/elifcifci"}
           title="Go her github"
           target="_blank"
           className="footer-link"
         >
-          {" "}
-          Elif Çiftçi{" "}
+          Elif Çiftçi
         </a>
       </p>
     </Wrapper>

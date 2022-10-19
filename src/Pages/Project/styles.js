@@ -43,8 +43,6 @@ export const Container = styled.div`
     .card-title {
       font-size: ${fontSizes.sizes4};
     }
-<<<<<<< HEAD
-=======
 
     .link-items {
       font-size: ${fontSizes.sizes3};
@@ -53,7 +51,6 @@ export const Container = styled.div`
         font-size: ${fontSizes.sizes4};
       }
     }
->>>>>>> 7378fcb2148bb13e9114f439773ace9924b29e7c
   }
 
   @media ${devices.desktop} {
@@ -237,10 +234,7 @@ export const OpenedCardContainer = styled(CardItem)`
     background: linear-gradient(90deg, rgba(255,249,245,1) 0%, rgba(255,236,221,1) 100%);     
     z-index: 5;
     margin-top: -6px;
-<<<<<<< HEAD
-=======
     width: 100%;
->>>>>>> 7378fcb2148bb13e9114f439773ace9924b29e7c
     padding: 10px;
     border-bottom: solid 1px rgba(115, 74, 64, 0.1);
   }
