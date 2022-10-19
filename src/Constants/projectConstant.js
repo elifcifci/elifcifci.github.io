@@ -7,8 +7,8 @@ export const projectConstant = [
       "Javascript, react, styled component, framer motion",
     ],
     imgLink: "./img/portfolio.png",
-    previewLink: "",
-    codeLink: "https://github.com/elifcifci/mesutcifci.github.io",
+    previewLink: "https://elifcifci.github.io/portfolio-template/",
+    codeLink: "https://github.com/elifcifci/portfolio-template",
     selected: false,
   },
   {
@@ -19,7 +19,7 @@ export const projectConstant = [
       "Javascript, react, styled component, framer motion",
     ],
     imgLink: "./img/rockstar-clone.jpg",
-    previewLink: "",
+    previewLink: "https://elifcifci.github.io/rockstar-games-clone/",
     codeLink: "https://github.com/elifcifci/rockstar-games-clone",
     selected: false,
   },
@@ -32,7 +32,7 @@ export const projectConstant = [
     ],
     imgLink: "./img/personal-portfolio.png",
     previewLink: "",
-    codeLink: "",
+    codeLink: "https://github.com/elifcifci/elifcifci.github.io",
     selected: false,
   },
 ];
