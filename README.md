@@ -28,4 +28,4 @@ In the project directory, you can run:
 
 ## What does the project look like?
 
-![Project View](./public/project-view.png)
+![Project View](./public/img/project-view.png)

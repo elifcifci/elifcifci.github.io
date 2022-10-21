@@ -6,7 +6,7 @@ export const projectConstant = [
       "This project was coded so that the software developers could exhibit their projects.",
       "Javascript, react, styled component, framer motion",
     ],
-    imgLink: "./img/portfolio.png",
+    imgLink: "./img/portfolio-template.png",
     previewLink: "https://elifcifci.github.io/portfolio-template/",
     codeLink: "https://github.com/elifcifci/portfolio-template",
     selected: false,
