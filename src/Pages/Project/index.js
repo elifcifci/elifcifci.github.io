@@ -55,7 +55,6 @@ function Project() {
           isOpen={open}
           toggleOpen={toggleOpen}
           openedCardKnowledge={openedCardKnowledge}
-          selectedCardId={selectedCardId}
         />
       )}
     </Container>

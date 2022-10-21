@@ -14,7 +14,7 @@ export const StyledAboutPageContainer = styled.div`
   ${directionColumnCenter};
   background-color: ${colors.primary};
   row-gap: 2rem;
-  padding: 0 30px;
+  padding: 10px 30px;
   scroll-snap-align: start;
 
   .about-page-imgs {
@@ -43,6 +43,7 @@ export const StyledAboutPageContainer = styled.div`
   }
   .about-me_text {
     padding: 0;
+    margin: 0;
     color: ${colors.secondary};
   }
 
@@ -64,15 +65,13 @@ export const StyledAboutPageContainer = styled.div`
     stroke-linecap: round;
   }
   @media${devices.mobileL} {
-    padding: 0 50px;
+    padding: 10px 50px;
   }
 
   @media${devices.tablet} {
-    padding: 0 100px;
+    padding: 10px 100px;
+    row-gap: 3rem;
 
-    .about-heading {
-      bottom: 50px;
-    }
     .about-me-texts {
       height: 300px;
     }
@@ -83,7 +82,7 @@ export const StyledAboutPageContainer = styled.div`
 
   @media${devices.laptop} {
     position: relative;
-    padding: 75px 250px 0 250px;
+    padding: 75px 250px 10px 250px;
 
     .about-page-imgs {
       display: flex;
@@ -135,7 +134,7 @@ export const StyledAboutPageContainer = styled.div`
   }
 
   @media${devices.laptopL} {
-    row-gap: 7rem;
+    row-gap: 8rem;
 
     .about-page-imgs {
       padding: 0px;

@@ -1,41 +1,6 @@
-import { useEffect } from "react";
 import { OpenedCardContainer } from "./styles";
 
-function OpenedCard({
-  openedCardKnowledge,
-  isOpen,
-  toggleOpen,
-  selectedCardId,
-}) {
-  const selectedCard = document.getElementById(`card-${selectedCardId}`);
-
-  //openedCard is  in the middle of project page. When it opened, the screen will scroll to the location of the openedCard.
-  useEffect(() => {
-    const innerHeight = window.innerHeight;
-    const documentHeight = document.documentElement.scrollHeight;
-    const mainAndAboutPageTotalHeight = innerHeight * 2;
-    const halfOfProjectPageHeight = (documentHeight - innerHeight * 2) / 2;
-    const halfOfCardHeight = 400;
-    const selectedCardLocation = selectedCard.offsetTop;
-
-    //openedCard seems middle of project page, so the page should automatically scrolled to location of openedCard.
-    // When the user close the openedCard the user should see the card that selected, so we should scroll the page first location again.
-    if (isOpen) {
-      window.scrollTo({
-        top:
-          mainAndAboutPageTotalHeight +
-          halfOfProjectPageHeight -
-          halfOfCardHeight,
-        behavior: "smooth",
-      });
-    } else {
-      window.scrollTo({
-        top: mainAndAboutPageTotalHeight + selectedCardLocation - 100,
-        behavior: "smooth",
-      });
-    }
-  }, [isOpen]);
-
+function OpenedCard({ openedCardKnowledge, isOpen, toggleOpen }) {
   const openedCardConfig = {
     open: {
       display: "initial",

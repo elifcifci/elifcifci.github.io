@@ -5,7 +5,7 @@ import { StyledAboutPageContainer } from "./styles";
 const About = () => {
   return (
     <StyledAboutPageContainer id="about-page">
-      <h1 className="about-heading page-heading">Who am I?</h1>
+      <h1 className="page-heading">Who am I?</h1>
 
       <section className="about-page-imgs">
         <img
@@ -18,7 +18,7 @@ const About = () => {
         />
         <img
           className="about-page_img about-page_profile-img          "
-          src="./img/profile-img.jpg"
+          src="./img/profile.jpg"
         />
       </section>
 

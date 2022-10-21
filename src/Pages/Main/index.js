@@ -20,7 +20,7 @@ const Main = () => {
       <div className="img-container">
         <img className="main-banner" src="/img/banner.png" />
       </div>
-      <img className="profile-img" src="./img/profile-img.jpg" />
+      <img className="profile-img" src="./img/profile.jpg" />
       <div className="main-text-container">
         <h1 className="main-heading">
           Welcome! <span>I am Elif Çiftçi</span>

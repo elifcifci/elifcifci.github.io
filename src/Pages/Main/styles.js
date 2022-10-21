@@ -17,7 +17,7 @@ export const StyledMainContainer = styled.div`
 
   .main-banner {
     width: 100%;
-    height: 200px;
+    height: 150px;
     object-fit: cover;
     filter: opacity(80%);
     position: relative;
@@ -30,7 +30,7 @@ export const StyledMainContainer = styled.div`
     height: 120px;
     object-fit: cover;
     position: absolute;
-    top: 120px;
+    top: 75px;
     right: 10px;
     border-radius: 50%;
   }
@@ -63,26 +63,25 @@ export const StyledMainContainer = styled.div`
     padding-top: 5px;
   }
 
-  @media ${devices.mobileS} {
+  @media ${devices.mobileL} {
     .main-description {
       font-size: ${fontSizes.sizes5};
     }
     .profile-img {
-      width: 150px;
-      height: 150px;
-      top: 100px;
-      right: 10px;
+      width: 130px;
+      height: 130px;
+      top: 65px;
     }
   }
 
   @media ${devices.tablet} {
     .main-banner {
-      height: 250px;
+      height: 220px;
     }
     .profile-img {
-      width: 180px;
-      height: 180px;
-      top: 130px;
+      width: 160px;
+      height: 160px;
+      top: 120px;
       right: 30px;
     }
     .main-heading {

@@ -145,12 +145,10 @@ export const CardItem = styled(motion.div)`
 
     &:nth-child(4n + 1) {
       flex: 1 0 60%;
-      max-width: 60%;
     }
 
     &:nth-child(4n + 4) {
       flex: 1 0 60%;
-      max-width: 60%;
     }
 
     .card-title {
@@ -214,24 +212,29 @@ export const LinkItems = styled.a`
 
 export const OpenedCardContainer = styled(CardItem)`
   width: 90%;
-  max-width: 600px;
+  max-width: 500px;
   height: auto;
   padding: 0;
-  position: absolute;
+  position: fixed;
+  top: 100px;
   z-index: 4;
   overflow: hidden;
   box-sizing: border-box;
-  box-shadow: 2px 2px 7px rgba(0,0,0,.5);
+  box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
 
-  .opened-card_img{
+  .opened-card_img {
     width: 100%;
     height: auto;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
   }
-  .opened-card-title-container {   
+  .opened-card-title-container {
     margin: 10;
-    background: linear-gradient(90deg, rgba(255,249,245,1) 0%, rgba(255,236,221,1) 100%);     
+    background: linear-gradient(
+      90deg,
+      rgba(255, 249, 245, 1) 0%,
+      rgba(255, 236, 221, 1) 100%
+    );
     z-index: 5;
     margin-top: -6px;
     width: 100%;
@@ -248,7 +251,11 @@ export const OpenedCardContainer = styled(CardItem)`
   .opened-card-detail-container {
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, rgba(255,249,245,1) 0%, rgba(255,236,221,1) 100%); 
+    background: linear-gradient(
+      90deg,
+      rgba(255, 249, 245, 1) 0%,
+      rgba(255, 236, 221, 1) 100%
+    );
     padding: 10px;
     margin: 0;
     border-bottom-right-radius: 10px;
@@ -258,7 +265,7 @@ export const OpenedCardContainer = styled(CardItem)`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    row-gap: 0.7rem; 
+    row-gap: 0.7rem;
   }
   .opened_description {
     margin: 0;
@@ -269,8 +276,8 @@ export const OpenedCardContainer = styled(CardItem)`
   }
 
   @media ${devices.mobileXL} {
-    .opened-card-title-container {  
-      padding: 18px; 
+    .opened-card-title-container {
+      padding: 12px;
     }
     .opened-card_title {
       font-size: ${fontSizes.sizes3};
@@ -279,31 +286,30 @@ export const OpenedCardContainer = styled(CardItem)`
       padding: 18px;
     }
     .opened_description {
-      font-size:${fontSizes.sizes1};
-    }
-  }
-  
-  @media ${devices.laptop} {
-    .opened-card_title {
-      font-size: ${fontSizes.sizes4};
-    }
-    .opened_description {
-      font-size:${fontSizes.sizes2};
+      font-size: ${fontSizes.sizes1};
     }
   }
 
+  @media ${devices.laptop} {
+    top: 120px;
+
+    .opened-card-title-container {
+      padding: 16px;
+    }
+  }
   @media ${devices.laptopL} {
+    max-width: 600px;
+    top: 150px;
+
     .opened-card_title {
       font-size: ${fontSizes.sizes5};
     }
     .opened_description {
-      font-size:${fontSizes.sizes4};
+      font-size: ${fontSizes.sizes4};
     }
   }
 
   @media ${devices.desktop} {
-    .opened-card-image-container{
-      max-width: 800px; !important
-    }
+    max-width: 800px;
   }
 `;
