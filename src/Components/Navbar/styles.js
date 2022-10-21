@@ -40,11 +40,6 @@ export const Sidebar = styled(motion.div)`
     max-width: 350px;
   }
   @media ${devices.laptop} {
-    background-color: ${colors.secondary};
-    position: fixed;
-    box-shadow: 0px 1px 2px ${colors.darkBrown};
-    width: 100%;
-    height: 65px;
     display: none;
   }
 `;

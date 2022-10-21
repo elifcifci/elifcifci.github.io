@@ -45,6 +45,7 @@ export const ItemContainer = styled(motion.li)`
   font-weight: bold;
   box-sizing: border-box;
   padding: 0px;
+
   @media ${devices.mobileS} {
     font-size: ${fontSizes.sizes4};
   }
@@ -63,10 +64,8 @@ export const ItemContainer = styled(motion.li)`
     &:after {
       content: "";
       border-bottom: 3px solid ${colors.primary} !important;
-
       width: 100%;
       height: 100%;
-
       position: relative;
       bottom: 0;
     }

@@ -38,7 +38,7 @@ export const StyledMainContainer = styled.div`
   .main-text-container {
     width: 100%;
     height: 100%;
-    height: calc(100vh - 200px);
+    height: calc(100vh - 255px);
     padding: 100px 0;
     box-sizing: border-box;
     ${directionColumnCenter};
@@ -76,27 +76,24 @@ export const StyledMainContainer = styled.div`
 
   @media ${devices.tablet} {
     .main-banner {
-      height: 220px;
+      height: 200px;
     }
     .profile-img {
       width: 160px;
       height: 160px;
-      top: 120px;
+      top: 100px;
       right: 30px;
     }
     .main-heading {
       font-size: ${fontSizes.sizes8};
       line-height: 65px;
     }
-    .main-text-container {
-      height: calc(100vh - 255px);
-    }
   }
 
   @media ${devices.laptop} {
     .main-banner {
       top: 75px;
-      height: 180px;
+      height: 160px;
     }
     .inner-container {
       top: 0px;
@@ -106,7 +103,7 @@ export const StyledMainContainer = styled.div`
     }
 
     .main-text-container {
-      height: calc(100vh - 255px);
+      height: calc(100vh - 155px);
     }
     .main-heading {
       font-size: ${fontSizes.sizes9};
@@ -123,17 +120,11 @@ export const StyledMainContainer = styled.div`
 
   @media ${devices.laptopL} {
     .main-banner {
-      height: 320px;
-    }
-    .profile-img {
-      width: 250px;
-      height: 250px;
-      right: 50px;
-      top: 230px;
+      height: 200px;
     }
 
     .main-text-container {
-      height: calc(100vh - 395px);
+      height: calc(100vh - 250px);
     }
     .main-heading {
       font-size: ${fontSizes.sizes10};
@@ -147,13 +138,7 @@ export const StyledMainContainer = styled.div`
 
   @media ${devices.laptopXL} {
     .main-banner {
-      height: 360px;
-    }
-    .profile-img {
-      width: 300px;
       height: 300px;
-      right: 90px;
-      top: 235px;
     }
 
     .main-heading {
