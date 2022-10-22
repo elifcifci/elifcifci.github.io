@@ -9,7 +9,7 @@ function OpenedCard({ openedCardKnowledge, isOpen, toggleOpen }) {
         damping: 30,
         delay: 0.2,
       },
-      opacity: [0, 0.9, 1],
+      opacity: [0, 1, 1],
     },
     closed: {
       display: "none",
