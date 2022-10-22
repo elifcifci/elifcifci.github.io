@@ -31,7 +31,7 @@ export const projectConstant = [
       "Javascript, react, styled component, framer motion",
     ],
     imgLink: "./img/portfolio-template.png",
-    previewLink: "https://elifcifci.github.io/portfolio-template/",
+    previewLink: "https://elifciftci-portfolio-template.netlify.app/",
     codeLink: "https://elifciftci-portfolio-template.netlify.app/",
     selected: false,
   },
