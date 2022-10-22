@@ -22,10 +22,8 @@ In the project directory, you can run:
 
 **Not:** The project run "http://localhost:3000"
 
-**Not:** To see my website, please follow the link:
-
-#### elifcifci.github.io
-
 ## What does the project look like?
+
+- To see the project click [here](https://elifciftci.netlify.app/)
 
 ![Project View](./public/img/project-view.png)

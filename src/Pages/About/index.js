@@ -1,6 +1,8 @@
 import React from "react";
-import { contactConstants } from "../../Constants/contactConstants";
 import { StyledAboutPageContainer } from "./styles";
+
+import { imagesConstants } from "../../Constants/aboutPageImagesConstants";
+import { contactConstants } from "../../Constants/contactConstants";
 
 const About = () => {
   return (
@@ -8,18 +10,16 @@ const About = () => {
       <h1 className="page-heading">Who am I?</h1>
 
       <section className="about-page-imgs">
-        <img
-          className="about-page_img about-page_flower-img"
-          src="./img/flowerAndBook.jpg"
-        />
-        <img
-          className="about-page_img about-page_opposite-flower-img"
-          src="./img/oppositeFlowerAndBook.jpg"
-        />
-        <img
-          className="about-page_img about-page_profile-img          "
-          src="./img/profile.jpg"
-        />
+        {imagesConstants.map((image) => {
+          return (
+            <img
+              key={image.className}
+              className={`about-page_img ${image.className}`}
+              src={image.src}
+              alt={image.alt}
+            />
+          );
+        })}
       </section>
 
       <section className="about-me-texts">

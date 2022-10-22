@@ -7,16 +7,16 @@ function OpenedCard({ openedCardKnowledge, isOpen, toggleOpen }) {
       transition: {
         type: "spring",
         damping: 30,
-        delay: 0.4,
+        delay: 0.2,
       },
+      opacity: [0, 0.9, 1],
     },
     closed: {
       display: "none",
       transition: {
-        delay: 1,
-        type: "tween",
+        type: "spring",
         damping: 30,
-        delay: 0.4,
+        delay: 0.2,
       },
     },
   };
