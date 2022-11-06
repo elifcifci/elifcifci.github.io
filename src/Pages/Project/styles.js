@@ -275,15 +275,21 @@ export const OpenedCardContainer = styled(CardItem)`
     font-weight: bold;
   }
 
-  @media ${devices.mobileXL} {
+  @media ${devices.tablet} {
+    max-width: 640px;
+    top: 80px;
+
+    .opened-card_img {
+      height: 400px;
+    }
     .opened-card-title-container {
       padding: 12px;
     }
     .opened-card_title {
-      font-size: ${fontSizes.sizes3};
+      font-size: ${fontSizes.sizes4};
     }
     .opened-card-detail-container {
-      padding: 18px;
+      padding: 16px;
     }
     .opened_description {
       font-size: ${fontSizes.sizes1};
@@ -291,21 +297,23 @@ export const OpenedCardContainer = styled(CardItem)`
   }
 
   @media ${devices.laptop} {
-    top: 120px;
+    top: 100px;
 
     .opened-card-title-container {
-      padding: 16px;
     }
   }
   @media ${devices.laptopL} {
-    max-width: 600px;
-    top: 150px;
+    top: 120px;
+
+    .opened-card_img {
+      height: 440px;
+    }
 
     .opened-card_title {
-      font-size: ${fontSizes.sizes5};
+      font-size: 22px;
     }
     .opened_description {
-      font-size: ${fontSizes.sizes4};
+      font-size: ${fontSizes.sizes1};
     }
   }
 

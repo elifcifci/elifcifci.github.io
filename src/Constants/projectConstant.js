@@ -39,9 +39,8 @@ export const projectConstant = [
     id: "3",
     title: "Chuck Norris Facts",
     details: [
-      `This website contains jokes about Chuck Norris, called "Chuck Norris facts". Within the site, you can find random jokes or jokes from specific categories, temporarily add them to your joke basket or permanently save them to your saved jokes. You can create different users. Users' knowledge keeps in localStorage.
-Jokes are taken from chucknorris.io.`,
-      "Javascript, react, css module, ant design",
+      ` This website contains "Chuck Norris facts". Within the site, you can find jokes from different categories, temporarily add them to your basket or permanently save them to your saved page. You can create different users. Users' information is stored in localStorage.`,
+      " Javascript, react, CSS module, ant design",
     ],
     imgLink: "./img/joke-create.png",
     previewLink: "https://joke-generator-psi.vercel.app/",
