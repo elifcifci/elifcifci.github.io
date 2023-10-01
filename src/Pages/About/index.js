@@ -24,12 +24,12 @@ const About = () => {
 
       <section className="about-me-texts">
         <p className="about-me_text">
-          I'm Elif Çiftçi. I have been developing myself in the front-end field
-          for 1 year.
-          <br />
-          I made projects using HTML, CSS, JavaScript, React JS, framer motion
-          and styled component technologies.
-          <br />I continue to improve myself every day.
+        I'm Elif Çiftçi, a Frontend Developer with one year of experience at <a href="https://teklifimgelsin.com/" target="_blank">Teklifimgelsin</a>. 
+         <br />
+        Proficient in Next.js, HTML, CSS, JavaScript, and Ant Design with Sass. 
+        <br />
+        Additionally, I made web application projects using React.js, Framer Motion and Styled Components.
+
         </p>
       </section>
 
