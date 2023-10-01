@@ -45,6 +45,11 @@ export const StyledAboutPageContainer = styled.div`
     padding: 0;
     margin: 0;
     color: ${colors.secondary};
+
+    a {
+      color: ${colors.secondary};
+      font-weight: bold
+    }
   }
 
   .about-page_link {
