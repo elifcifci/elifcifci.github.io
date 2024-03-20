@@ -88,6 +88,7 @@ export const StyledAboutPageContainer = styled.div`
   @media${devices.laptop} {
     position: relative;
     padding: 75px 250px 10px 250px;
+    row-gap: 4rem;
 
     .about-page-imgs {
       display: flex;
@@ -126,11 +127,7 @@ export const StyledAboutPageContainer = styled.div`
     .about-me_text {
       font-size: ${fontSizes.sizes4};
     }
-    .about-page-contacts {
-      position: relative;
-      z-index: 1;
-      top: 80px;
-    }
+  
     .about-page-svg {
       &:hover {
         scale: 1.2;
@@ -161,10 +158,6 @@ export const StyledAboutPageContainer = styled.div`
       display: initial;
       width: 540px;
       height: 380px;
-    }
-
-    .about-page-contacts {
-      top: 70px;
     }
   }
 
