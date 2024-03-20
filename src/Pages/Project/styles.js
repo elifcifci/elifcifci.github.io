@@ -56,6 +56,7 @@ export const Container = styled.div`
   @media ${devices.desktop} {
     .card-container {
       max-width: 1700px;
+      gap: 1.5rem;
     }
   }
 `;
@@ -72,7 +73,7 @@ export const CardItem = styled(motion.div)`
   margin: 0 auto;
   border-radius: 20px;
   box-sizing: border-box;
-  box-shadow: 2px 2px 7px ${colors.darkTextColor};
+  border: solid 3px ${colors.secondary};
 
   .title-container {
     position: absolute;
@@ -162,6 +163,10 @@ export const CardItem = styled(motion.div)`
         font-size: ${fontSizes.sizes4};
       }
     }
+  }
+
+  @media${devices.desktop} {
+    margin: unset;
   }
 `;
 
