@@ -1,5 +1,17 @@
 export const projectConstant = [
   {
+    id: "4",
+    title: "Evil Morty",
+    details: [
+      `This website contains web pages that you can visit by clicking on portals or by driving the spaceship with the keyboard.`,
+      "React, Typescript, Redux toolkit, Axios, Scss",
+    ],
+    imgLink: "./img/evil-morty.png",
+    previewLink: "https://evil-morty.vercel.app/",
+    codeLink: "https://github.com/elifcifci/evil-morty",
+    selected: false,
+  },
+  {
     id: "3",
     title: "Chuck Norris Facts",
     details: [
@@ -11,7 +23,7 @@ export const projectConstant = [
     codeLink: "https://github.com/elifcifci/joke-generator",
     selected: false,
   },
-    {
+  {
     id: "1",
     title: "Rockstart Games Clone",
     details: [
@@ -46,5 +58,5 @@ export const projectConstant = [
     previewLink: "https://elifciftci-portfolio-template.netlify.app/",
     codeLink: "https://elifciftci-portfolio-template.netlify.app/",
     selected: false,
-  }
+  },
 ];
