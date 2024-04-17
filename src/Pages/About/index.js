@@ -28,7 +28,7 @@ const About = () => {
          <br />
         Proficient in Next.js, React.js, Typescript, HTML, CSS, JavaScript, and Ant Design with Sass. 
         <br />
-        Additionally, I made web application projects using Redux/RTK, Framer Motion, and Styled Components.
+        Additionally, I made web application projects using Next.js 14, Redux/RTK, Framer Motion, Styled Components and Tailwind.
 
         </p>
       </section>
