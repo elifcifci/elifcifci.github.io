@@ -1,7 +1,7 @@
 export const imagesConstants = [
   {
     className: "about-page_flower-img",
-    src: "./img/flowerAndBook.jpg",
+    src: "./img/flowerAndBook.webp",
     alt: "flower and book",
   },
   {

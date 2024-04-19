@@ -19,7 +19,7 @@ export const NavbarLink = styled(HashLink)`
   border-radius: 15px;
   height: 55px;
   line-height: 55px;
-  transition: background-color 0s;
+  transition: background-color .3s ease;
 
   @media ${devices.laptop} {
     box-sizing: border-box;
@@ -68,6 +68,7 @@ export const ItemContainer = styled(motion.li)`
       height: 100%;
       position: relative;
       bottom: 0;
+      transition: all .3s ease;
     }
 
     &:hover {
@@ -78,6 +79,7 @@ export const ItemContainer = styled(motion.li)`
         position: relative;
         box-sizing: border-box;
         bottom: 0;
+        transition: all .3s ease;
       }
     }
 
@@ -90,6 +92,7 @@ export const ItemContainer = styled(motion.li)`
         position: relative;
         box-sizing: border-box;
         bottom: 0;
+        transition: all .3s ease;
     }`}
   }
 `;

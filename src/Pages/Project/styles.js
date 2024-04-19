@@ -135,6 +135,7 @@ export const CardItem = styled(motion.div)`
     line-height: 50px;
     height: 100%;
     cursor: pointer;
+    transition: all .3s ease;
 
     &:hover {
       font-size: ${fontSizes.sizes3};
@@ -180,6 +181,7 @@ export const LinkItems = styled.a`
   line-height: 50px;
   height: 100%;
   cursor: pointer;
+  transition: all 0.3s ease;
 
   &:hover {
     font-size: ${fontSizes.sizes3};

@@ -129,6 +129,8 @@ export const StyledAboutPageContainer = styled.div`
     }
   
     .about-page-svg {
+      transition: all .3s ease;
+      
       &:hover {
         scale: 1.2;
       }

@@ -18,7 +18,7 @@ const Main = () => {
   return (
     <StyledMainContainer id="main-page">
       <div className="img-container">
-        <img className="main-banner" src="/img/banner.png" />
+        <img className="main-banner" src="/img/banner.webp" />
       </div>
       <img className="profile-img" src="./img/profile.jpg" />
       <div className="main-text-container">
